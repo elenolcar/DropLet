@@ -1,0 +1,933 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "drop let period",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "I have no idea what it is going on",
+            "I don\u0027t know what to do",
+            "How does this work",
+            "I want to know how this works",
+            "I don\u0027t understand anything",
+            "What is this about",
+            "I want to know what this skill does",
+            "I want to know what this application does",
+            "Help",
+            "I need help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloIntent",
+          "slots": [],
+          "samples": [
+            "hey",
+            "hello",
+            "how are you",
+            "say hi",
+            "hi",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "GetFullPeriodIntent",
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "The day was {day}",
+                "On {day}",
+                "{day} "
+              ]
+            },
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "samples": [
+                "The month was in {month}",
+                "{month}",
+                "In {month}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "{year}",
+                "In {year}",
+                "The year was in {year}"
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{duration} days",
+                "It lasts {duration} days",
+                "My period lasts {duration} days",
+                "About {duration} days",
+                "My menstrual cycle lasts {duration} days",
+                "My menstruation lasts {duration}",
+                "It lasts about {duration}"
+              ]
+            }
+          ],
+          "samples": [
+            "{year} {day} {month}",
+            "{day} of {month}",
+            "{day} of {month} of {year}",
+            "{year} {month} {day}",
+            "the last period was the {day}",
+            "the last menstruation was on {month}",
+            "the last time was the {day} {month}",
+            "the last time it was a {day}",
+            "in the {day} {month}",
+            "my cycle lasts for {duration} days",
+            "it took {duration} days",
+            "the last menstruation was the {day}",
+            "the last menstruation was on the {day} of {month}",
+            "{month}",
+            "{month} {year} {day}",
+            "{month} {day} {year}",
+            "{month} {day}",
+            "the last period was {day} {month}",
+            "my last period was {day} {month}",
+            "my last period was a {day}",
+            "last period was {day} {month}",
+            "My last period was on {month}",
+            "My last period was the {day}",
+            "My last period was on the {day} of {month}",
+            "My last menstruation was the {day} of {month}",
+            "My last period was the {day} of {month}",
+            "My last period was the day {day} of {month}",
+            "My last menstruation was the day {day} of {month}",
+            "{day} {month} {year}",
+            "{day} {month}",
+            "{day}",
+            "it lasts about {duration} days",
+            "about {duration} days",
+            "my cycle is only {duration} days",
+            "it took about {duration} days",
+            "my cycle is over {duration} days",
+            "It lasts {duration} days",
+            "My menstruation lasts {duration} days",
+            "My cycle lasts {duration} days",
+            "My menstrual cycle lasts {duration} days",
+            "My period lasts {duration} days",
+            "{duration} days"
+          ]
+        },
+        {
+          "name": "GetBirthPillIntent",
+          "slots": [],
+          "samples": [
+            "Add birth control pill record",
+            "Add pill record",
+            "I am taking the birth control pill",
+            "I am taking the pill",
+            "I am taking my pill",
+            "I want to add my pill time",
+            "Add my birth control pill time",
+            "I want to add my birth control pill time",
+            "Add birth control pill time",
+            "I have started taking the pill",
+            "I have started taking contraceptive pills",
+            "I have started taking birth control pills",
+            "I want to add my pill record",
+            "I want to add my contraceptive pill record"
+          ]
+        },
+        {
+          "name": "AddBirthPillIntent",
+          "slots": [
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "I take the pill at {time}",
+                "{time}",
+                "I usually take my birth pill at {time}",
+                "Yes sorry at {time}",
+                "At {time}",
+                "Yes at {time}"
+              ]
+            }
+          ],
+          "samples": [
+            "I usually take the contraceptive pill at {time}",
+            "I usually take my contraceptive pill at {time}",
+            "I take my contraceptive pill at {time}",
+            "I take the pill at {time}",
+            "I take it at {time}",
+            "I take my pill at {time}",
+            "I take my birth control pill at {time}",
+            "I usually take my birth control pill at {time}",
+            "At {time}",
+            "I usually take the pill at {time}"
+          ]
+        },
+        {
+          "name": "NextPeriodIntent",
+          "slots": [],
+          "samples": [
+            "I want to know when I am going to have my next period",
+            "Next period",
+            "When I am having my next period",
+            "When it is my period",
+            "When I am having my period",
+            "When is it my next period",
+            "I want to know when I am going to have my next menstruation",
+            "Next menstruation",
+            "When I am having my next menstruation",
+            "When it is my menstruation",
+            "When I am having my menstruation",
+            "When is it my next menstruation"
+          ]
+        },
+        {
+          "name": "AddNewPeriodIntent",
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "the last time was the {day} {month}",
+                "The last menstruation was on the {day} of {month}",
+                "My last period was the day {day} of {month}",
+                "My last period was on the {day} of {month}",
+                "{year}",
+                "{month}",
+                "{month} {day}",
+                "{month} {year} {day}",
+                "{month} {day} {year}",
+                "{day} {month} {year}",
+                "{day} {month}",
+                "the last period was the {day}",
+                "{year} {month} {day}",
+                "{day}"
+              ]
+            },
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "samples": [
+                "{year} {day} {month}",
+                "{month} {year} {day}",
+                "{day} {year} {month}",
+                "{year} {month} {day}",
+                "{month} {day} {year}",
+                "{day} {month} {year}",
+                "In {month}",
+                "The month was {month}",
+                "{month}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "{month} {year} {day}",
+                "{month} {day} {year}",
+                "{day} {month} {year}",
+                "{day} {year} {month}",
+                "{year} {day} {month}",
+                "{year} {day}",
+                "On {year}",
+                "{year} {month} {day}",
+                "{year}"
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "My period has lasted {duration} day",
+                "It has lasted {duration} day",
+                "{duration} day",
+                "My period has lasted {duration} days",
+                "{duration}",
+                "It has lasted {duration} days",
+                "{duration} days"
+              ]
+            }
+          ],
+          "samples": [
+            "New period",
+            "Add new period",
+            "Add period date",
+            "Add period period record",
+            "Add new period entry",
+            "I want to add a new period entry",
+            "I want to add a new period record",
+            "New period date",
+            "I want to add a new period date"
+          ]
+        },
+        {
+          "name": "DeleteBirthPillRecordIntent",
+          "slots": [],
+          "samples": [
+            "I am not taking the contraceptive pill anymore",
+            "I am not taking the pill anymore",
+            "Delete my record pill",
+            "Erase record pill",
+            "I want you to erase my pill record",
+            "I want you to delete my record pill",
+            "Delete record pill"
+          ]
+        },
+        {
+          "name": "BirthPillInfoIntent",
+          "slots": [],
+          "samples": [
+            "I forgot the time I take my pill",
+            "I forgot what time I take my pill",
+            "I have forgotten the time I take my pill",
+            "When am I taking my pill",
+            "When am I taking the pill",
+            "Tell me when do I have to take my pill",
+            "Tell me the time of the pill",
+            "I need to know the time of the pill",
+            "Time of the birth control pill",
+            "What time do I have to take my birth control pill",
+            "What time do I have to take the birth control pill",
+            "When do I have to take the birth control pill",
+            "Time of the pill",
+            "When do I have to take my pill",
+            "What time do I have to take my pill",
+            "What time do I have to take the pill",
+            "When do I have to take the pill"
+          ]
+        },
+        {
+          "name": "ForgotPillIntent",
+          "slots": [],
+          "samples": [
+            "i want to know what to do if i forgot to take my birth control pill",
+            "i want to know what to do if i forgot to take the pill",
+            "i want to know what to do if i forgot to take my contraceptive pill",
+            "I have forgotten to take my pill",
+            "I have forgotten my pill",
+            "I want to know what to do if I forget to take my contraceptive pill",
+            "I want to know what to do if I forget to take my birth control pill",
+            "I want to know what to do if I forget to take my pill",
+            "What do I do if I forget to take my contraceptive pill",
+            "What do I do if I forget to take my birth control pill",
+            "What do I do if I forget to take my pill",
+            "I forgot to take my contraceptive pill",
+            "I forgot to take my birth control pill",
+            "I forgot to take the pill",
+            "I forgot to take my pill"
+          ]
+        },
+        {
+          "name": "FertileDayIntent",
+          "slots": [],
+          "samples": [
+            "Tell me my ovulation day",
+            "Tell me my fertile day",
+            "When is it my next ovulation cycle",
+            "When am I having my ovulation cycle",
+            "When it is my ovulation cycle",
+            "When I am having my next ovulation cycle",
+            "Next ovulation cycle",
+            "Ovulation cycle",
+            "I want to know when I am going to have my ovulation cycle",
+            "When is it my next fertile day",
+            "When am I having my fertile day",
+            "When is it my fertile day",
+            "Most fertile day",
+            "When I am having my fertile day",
+            "Next fertile day",
+            "Fertile day",
+            "I want to know when I am going to have my next fertile day",
+            "I want to know when I am fertile"
+          ]
+        },
+        {
+          "name": "LastPeriodIntent",
+          "slots": [],
+          "samples": [
+            "I don\u0027t know when was my last period",
+            "What is my last period",
+            "I don\u0027t remember when I had my last period",
+            "I want to know my last period",
+            "Tell me my last period",
+            "Last period",
+            "When was my last period",
+            "When did I have my last period"
+          ]
+        },
+        {
+          "name": "ThanksIntent",
+          "slots": [],
+          "samples": [
+            "thank you very much",
+            "thanks a lot",
+            "Much appreciated",
+            "Thank you for taking the time to do this",
+            "That is so kind of you",
+            "Cheers",
+            "This has been such a blessing",
+            "Please accept my deepest gratitude",
+            "appreciate it",
+            "Thanks for your hard work on this",
+            "I could not have done it without you",
+            "Much obliged",
+            "Thanks for having my back",
+            "I owe you one",
+            "I am so grateful",
+            "thank you that\u0027s all for now",
+            "I appreciate it",
+            "thank you kindly",
+            "thank you so much",
+            "thank you",
+            "thanks"
+          ]
+        },
+        {
+          "name": "ByeIntent",
+          "slots": [],
+          "samples": [
+            "see you later alligator",
+            "Later",
+            "See you soon",
+            " Talk to you later",
+            "Catch you later",
+            "See you around",
+            "So long",
+            "Farewell",
+            "Goodbye",
+            "See you next time",
+            "Bye"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetFullPeriodIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.361834662782"
+          },
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.361834662782.86363395819"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.361834662782.86363395819.1242476161788",
+                  "values": [
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "20",
+                    "21"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.361834662782.1093096308400"
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.361834662782.1525492443520"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThan",
+                  "prompt": "Slot.Validation.361834662782.1525492443520.884038582855",
+                  "value": "1900"
+                }
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.361834662782.203567451841"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "AddBirthPillIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1299762033996.465752075019"
+              }
+            }
+          ]
+        },
+        {
+          "name": "AddNewPeriodIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1663050499938"
+          },
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1663050499938.271656059817"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.1578023987984.237978769504.1399034305105",
+                  "values": [
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "20",
+                    "21"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1663050499938.654668104612"
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1663050499938.1172117477792"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThan",
+                  "prompt": "Slot.Validation.1578023987984.532094035352.1207183522421",
+                  "value": "1900"
+                }
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1663050499938.167204942822"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.471101594078.161633417138",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thanks for the information but I also need the day of your last period. Could you tell me the day it was?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.471101594078.283331437171",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thanks for the information but I also need the month of your last period. Could you tell me?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1080994765787.1171929029836",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I\u0027m sorry, but I need to know the duration of your period in order to give you a best experience"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.740473504705.240921236002",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You need to tell me the day"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.740473504705.240921236002.193388836780",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, you have to say a day between one and thirty one"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.740473504705.975896260919",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which month was it?"
+          },
+          {
+            "type": "PlainText",
+            "value": "The day was on {day} . Which month was it?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.740473504705.31478352927",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which year was it?"
+          },
+          {
+            "type": "PlainText",
+            "value": "The month was in {month} . Which year was it?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.740473504705.31478352927.829694005136",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "That\u0027s too old to be true. Which year was it again?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.740473504705.31478352927",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "So your period is the {day} of {month} in {year} , is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.740473504705.1070613309815",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I\u0027m sorry, but I need to know the duration of your period in order to give you a best experience"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.740473504705.1070613309815",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "a"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.740473504705",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Having said that, your last period was the {day} of {month} of {year} , and lasts {duration} days, isn\u0027t it?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1127811000729.1212168917331",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "a"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1127811000729.1091216125079",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "a"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1127811000729.1188885050012",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "a"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.361834662782.1525492443520",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The day was {day} and the month was {month} . Which year was it?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Which year was it?"
+          },
+          {
+            "type": "PlainText",
+            "value": "The month was in {month} . Which year was it?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.361834662782.1525492443520.884038582855",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "That\u0027s too old to be true. Which year was it again?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.361834662782.1093096308400",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which month was it?"
+          },
+          {
+            "type": "PlainText",
+            "value": "The day was on {day} . Which month was it?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.361834662782.86363395819",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You need to tell me the day"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.361834662782.86363395819.1242476161788",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, you have to say a day between one and thirty one"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.361834662782.203567451841",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you so much. Now I need to know the duration of your period in days in order to give you a best experience"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.361834662782",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Having said that, your last period was the {day} of {month} of {year} , and lasted {duration} days, wasn\u0027t it?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1299762033996.465752075019",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry but you didn\u0027t specified the time you take the birth pill, could you tell me?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1578023987984.532094035352.1207183522421",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "That\u0027s too old to be true. Please, try again"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1578023987984.237978769504.1399034305105",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You must say a number between one and thirty one"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1663050499938.271656059817",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ok. I need the day, month and year you had your last period to record it correctly"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1663050499938.654668104612",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I need the month of your last period to record it correctly"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1663050499938.1172117477792",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I need the year of your last period in order to record it correctly"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1663050499938.167204942822",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thank you so much for the information. Now I need to know how long has it lasted your period in days"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1663050499938",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "So your last period was the {day} of {month} of {year} , and it lasted {duration} days, wasn\u0027t it?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "44"
+}

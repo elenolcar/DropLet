@@ -1,0 +1,93 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "A system that allows you to keep track of your period and birth control pills",
+          "examplePhrases": [
+            "Alexa open drop let period",
+            "Add new period",
+            "Help"
+          ],
+          "keywords": [
+            "period",
+            "menstruation",
+            "health",
+            "feminine",
+            "health",
+            "period",
+            "tracker",
+            "birth",
+            "control",
+            "pills"
+          ],
+          "name": "DropLet",
+          "description": "In DropLet if you provide it with the day, month and year of your last period and its duration, it can offer you a period tracker. It will remind you when your last period was, you can ask it about your next period and your most fertile day in case you need it. Optionally, if you take birth control pills, you can record the time you take them so DropLet can remind you. If you ever stop taking the pill, you can also ask DropLet to delete this record.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "en-US",
+            "language": "en"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Apart from giving to the skill the day, month and year to record the period and the duration in days, nothing else is needed. If you want to add a time for the birth control pill record you tell it a time and you have it. It is a simple and preliminary skill.",
+      "category": "HEALTH_AND_FITNESS",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:575423236894:function:867bc15f-0cee-43b8-b2b0-a2ec41e9d40c:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:575423236894:function:867bc15f-0cee-43b8-b2b0-a2ec41e9d40c:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:575423236894:function:867bc15f-0cee-43b8-b2b0-a2ec41e9d40c:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:575423236894:function:867bc15f-0cee-43b8-b2b0-a2ec41e9d40c:Release_0"
+            }
+          }
+        },
+        "dialogManagement": {
+          "dialogManagers": [
+            {
+              "type": "AMAZON.Conversations"
+            }
+          ]
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "shoppingKit": {
+        "isShoppingActionsEnabled": false,
+        "isAmazonAssociatesOnAlexaEnabled": false
+      },
+      "usesPersonalInfo": false
+    }
+  }
+}
