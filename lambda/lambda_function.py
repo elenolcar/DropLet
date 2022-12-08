@@ -107,8 +107,8 @@ class LaunchRequestHandler(AbstractRequestHandler):
                                 #====================================================================
                                 # Set a headline and subhead to display on the screen if there is one
                                 #====================================================================
-                                "Title": 'Tell me your last period date',
-                                "Subtitle": 'Welcome to DropLet.',
+                                "Title": 'Welcome to DropLet! :)',
+                                "Subtitle": 'You can say "Add new period" (and more!) or "Help" if you need help',
                             }
                         }
                     )
@@ -424,7 +424,7 @@ class NextPeriodIntentHandler(AbstractRequestHandler):
         if session_attributes["current_period"] == []:
         # comprueba si hay ahora mismo un periodo actual. Si no lo hay, te pide que se lo digas
             title = f'Sorry, you do not have any period records.'
-            subtitle = 'Do you want to know anything else?'
+            subtitle = 'Try to say Add new period.'
             speak_output = f"Sorry, you don't have any period records. Try to say Add new period."
         else:
             title = f'Your next period will be {nextPeriod}'
@@ -1130,7 +1130,7 @@ class NoIntentHandler(AbstractRequestHandler):
         
         # comprueba si hay ahora mismo un periodo actual. Si lo hay, no te pide esto
         title = f'Need anything else?'
-        subtitle = 'You can say Help if you do not know what to say'
+        subtitle = 'If you want to stop the skill just say Stop or Bye.'
         speak_output = "Ok. I'll be here if you need something. If you want to stop the skill just say Stop or Bye."
 
 
@@ -1175,9 +1175,42 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
+        
+        # Inicializamos variables para la parte visual (la de la pantalla).
+        title = ''
+        subtitle = ''
+        
+        # comprueba si hay ahora mismo un periodo actual. Si lo hay, no te pide esto
+        title = f'DropLet is a skill that allows you to keep track of your period and birth control pills'
+        subtitle = 'you can ask me your last period, your next period, to add a new period, your most fertile day, the time you take your birth control pill, delete the reminder when you take your birth control pill or get information if you forget to take the pill. What do you need?'
+        
         speak_output = "DropLet is an Alexa Skill made by a Software Engineer student for his Undergraduate Thesis Project. The main purpose of DropLet is to keep a record of your last period and its duration. and get directions if you forget to take your pill. You can also delete your pill time record and add a new date for your next period. As an added bonus, you can also record the time you take your birth control pill. This way, you can ask when your next period is due, your next most fertile day, be reminded when to take your pill, I'm here to offer you peace of mind and security. All in all, you can ask me your last period, your next period, to add a new period, your most fertile day, the time you take your birth control pill, delete the reminder when you take your birth control pill or get information if you forget to take the pill. What do you need?"
         
-        
+        #====================================================================
+        # Añade una manera de que se vea más visual con Alexa Layouts (por si el usuario presenta una Alexa con pantalla)
+        #====================================================================
+
+        # Import an Alexa Presentation Language (APL) template
+        with open("./documents/APL_simple.json") as apl_doc:
+            apl_simple = json.load(apl_doc)
+
+            if ask_utils.get_supported_interfaces(
+                    handler_input).alexa_presentation_apl is not None:
+                handler_input.response_builder.add_directive(
+                    RenderDocumentDirective(
+                        document=apl_simple,
+                        datasources={
+                            "myData": {
+                                #====================================================================
+                                # Proporciona un cabecera y una subcabecera para mostrar en la pantalla si hubiese una
+                                #====================================================================
+                                "Title": title,
+                                "Subtitle": subtitle,
+                            }
+                        }
+                    )
+                )
+
         return (
             handler_input.response_builder
                 .speak(speak_output)
